@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小猪 × 小兔</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 第一幕：森林里的小木屋 -->
+  <main class="home" id="home">
+
+    <!-- 天空里的光与云 -->
+    <div class="home__sun"></div>
+    <div class="cloud cloud--1"></div>
+    <div class="cloud cloud--2"></div>
+    <div class="cloud cloud--3"></div>
+
+    <!-- 插画场景 -->
+    <div class="scene">
+      <svg viewBox="0 0 1600 1040" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="森林里的小木屋，门口站着小猪和小兔">
+
+        <!-- 远山 -->
+        <path d="M0,596 Q380,548 780,580 T1600,566 L1600,760 L0,760 Z" fill="#8FA6B4" opacity="0.5"/>
+        <path d="M0,636 Q460,590 920,624 T1600,614 L1600,820 L0,820 Z" fill="#93A87F" opacity="0.6"/>
+
+        <!-- 远处小镇（湖边村落的一点点影子） -->
+        <g opacity="0.55" fill="#B7A585">
+          <rect x="1180" y="556" width="26" height="34"/><polygon points="1178,556 1193,540 1208,556"/>
+          <rect x="1224" y="562" width="22" height="28"/><polygon points="1222,562 1235,548 1248,562"/>
+          <rect x="1288" y="548" width="18" height="44"/><polygon points="1285,548 1297,532 1309,548"/>
+          <rect x="1258" y="566" width="20" height="24"/><polygon points="1256,566 1268,552 1280,566"/>
+        </g>
+
+        <!-- 草地 -->
+        <path d="M0,640 Q400,612 800,634 Q1200,656 1600,628 L1600,1040 L0,1040 Z" fill="#9BAB72"/>
+        <path d="M0,640 Q400,612 800,634 Q1200,656 1600,628 L1600,690 Q1200,712 800,692 Q400,672 0,700 Z" fill="#A9BA84" opacity="0.7"/>
+
+        <!-- 左侧大树 -->
+        <g>
+          <path d="M236,640 Q252,470 250,360 Q248,320 268,300" fill="none" stroke="#8A6A44" stroke-width="34" stroke-linecap="round"/>
+          <path d="M250,470 Q210,430 176,432" fill="none" stroke="#8A6A44" stroke-width="16" stroke-linecap="round"/>
+          <path d="M252,410 Q300,378 330,384" fill="none" stroke="#8A6A44" stroke-width="14" stroke-linecap="round"/>
+          <g class="svg-sway">
+            <circle cx="238" cy="250" r="122" fill="#7E9159"/>
+            <circle cx="132" cy="300" r="92"  fill="#8CA067"/>
+            <circle cx="348" cy="300" r="98"  fill="#728A4F"/>
+            <circle cx="220" cy="196" r="86"  fill="#93A870"/>
+            <circle cx="300" cy="360" r="70"  fill="#7E9159"/>
+            <circle cx="150" cy="380" r="58"  fill="#728A4F"/>
+          </g>
+        </g>
+
+        <!-- 房子 -->
+        <g>
+          <!-- 墙 -->
+          <rect x="560" y="360" width="480" height="362" rx="12" fill="#F4ECD8"/>
+          <rect x="560" y="360" width="30"  height="362" rx="12" fill="#E7D9BC" opacity="0.7"/>
+          <rect x="1010" y="360" width="30" height="362" rx="12" fill="#E7D9BC" opacity="0.7"/>
+
+          <!-- 屋顶 -->
+          <polygon points="512,398 800,246 1088,398" fill="#C0714A"/>
+          <polygon points="512,398 800,246 1088,398" fill="none" stroke="#A85E3B" stroke-width="4"/>
+          <line x1="560" y1="360" x2="800" y2="286" stroke="#A85E3B" stroke-width="3" opacity="0.5"/>
+          <line x1="1040" y1="360" x2="800" y2="286" stroke="#A85E3B" stroke-width="3" opacity="0.5"/>
+          <line x1="600" y1="392" x2="800" y2="312" stroke="#CE815A" stroke-width="3" opacity="0.5"/>
+          <line x1="1000" y1="392" x2="800" y2="312" stroke="#CE815A" stroke-width="3" opacity="0.5"/>
+
+          <!-- 烟囱 + 烟 -->
+          <rect x="936" y="292" width="42" height="100" fill="#B4643F"/>
+          <rect x="928" y="284" width="58" height="16" rx="3" fill="#9C5233"/>
+          <g fill="#EFE7D6">
+            <circle class="smoke"    cx="957" cy="276" r="12"/>
+            <circle class="smoke smoke--2" cx="964" cy="276" r="14"/>
+            <circle class="smoke smoke--3" cx="951" cy="276" r="11"/>
+          </g>
+
+          <!-- 阁楼圆窗 -->
+          <circle cx="800" cy="330" r="30" fill="#EEC98A" class="win-glow"/>
+          <circle cx="800" cy="330" r="30" fill="none" stroke="#9C7A50" stroke-width="6"/>
+          <line x1="770" y1="330" x2="830" y2="330" stroke="#9C7A50" stroke-width="4"/>
+          <line x1="800" y1="300" x2="800" y2="360" stroke="#9C7A50" stroke-width="4"/>
+
+          <!-- 左窗 -->
+          <g>
+            <rect x="574" y="470" width="30" height="112" rx="4" fill="#7C8C5E"/>
+            <rect x="700" y="470" width="30" height="112" rx="4" fill="#7C8C5E"/>
+            <rect x="604" y="464" width="96" height="120" rx="6" fill="#FBF4E6"/>
+            <rect x="612" y="472" width="80" height="104" fill="#EEC98A" class="win-glow"/>
+            <line x1="652" y1="472" x2="652" y2="576" stroke="#FBF4E6" stroke-width="6"/>
+            <line x1="612" y1="524" x2="692" y2="524" stroke="#FBF4E6" stroke-width="6"/>
+            <rect x="600" y="584" width="104" height="16" rx="4" fill="#9C7A50"/>
+            <g class="flower-sway"><circle cx="620" cy="580" r="7" fill="#E7A79A"/><circle cx="644" cy="578" r="7" fill="#EBC985"/><circle cx="668" cy="580" r="7" fill="#E7A79A"/><circle cx="688" cy="578" r="7" fill="#FBF4E6"/></g>
+          </g>
+
+          <!-- 右窗 -->
+          <g>
+            <rect x="898" y="470" width="30" height="112" rx="4" fill="#7C8C5E"/>
+            <rect x="1024" y="470" width="30" height="112" rx="4" fill="#7C8C5E"/>
+            <rect x="928" y="464" width="96" height="120" rx="6" fill="#FBF4E6"/>
+            <rect x="936" y="472" width="80" height="104" fill="#EEC98A" class="win-glow"/>
+            <line x1="976" y1="472" x2="976" y2="576" stroke="#FBF4E6" stroke-width="6"/>
+            <line x1="936" y1="524" x2="1016" y2="524" stroke="#FBF4E6" stroke-width="6"/>
+            <rect x="924" y="584" width="104" height="16" rx="4" fill="#9C7A50"/>
+            <g class="flower-sway"><circle cx="944" cy="580" r="7" fill="#EBC985"/><circle cx="968" cy="578" r="7" fill="#E7A79A"/><circle cx="992" cy="580" r="7" fill="#FBF4E6"/><circle cx="1012" cy="578" r="7" fill="#E7A79A"/></g>
+          </g>
+
+          <!-- 爬藤 -->
+          <path d="M566,398 Q548,470 566,540 Q582,600 560,660" fill="none" stroke="#728A4F" stroke-width="5"/>
+          <circle cx="556" cy="452" r="9" fill="#7E9159"/><circle cx="574" cy="500" r="9" fill="#7E9159"/>
+          <circle cx="552" cy="556" r="9" fill="#7E9159"/><circle cx="572" cy="610" r="9" fill="#7E9159"/>
+          <circle cx="560" cy="474" r="6" fill="#E7A79A"/><circle cx="566" cy="588" r="6" fill="#EBC985"/>
+
+          <!-- 门 + 暖光 -->
+          <ellipse cx="800" cy="676" rx="120" ry="150" fill="#EBC985" opacity="0.28"/>
+          <ellipse class="door-light" cx="800" cy="662" rx="150" ry="185" fill="#F4D58C" opacity="0"/>
+          <rect x="744" y="722" width="112" height="10" rx="5" fill="#C9B48C"/>
+          <rect x="728" y="732" width="144" height="12" rx="6" fill="#BBA477"/>
+          <path d="M756,722 L756,600 Q756,556 800,556 Q844,556 844,600 L844,722 Z" fill="#A67B4A"/>
+          <path d="M766,722 L766,602 Q766,566 800,566 Q834,566 834,602 L834,722 Z" fill="#B98C57"/>
+          <line x1="800" y1="566" x2="800" y2="722" stroke="#8A6238" stroke-width="3" opacity="0.6"/>
+          <circle cx="800" cy="612" r="12" fill="#EEC98A" class="win-glow"/>
+          <circle cx="824" cy="672" r="5" fill="#8A6238"/>
+        </g>
+
+        <!-- 石板小路 -->
+        <polygon points="762,724 838,724 918,1040 682,1040" fill="#D9C6A2"/>
+        <polygon points="762,724 838,724 918,1040 682,1040" fill="none" stroke="#C6B189" stroke-width="3" opacity="0.6"/>
+        <line x1="772" y1="794" x2="828" y2="794" stroke="#C6B189" stroke-width="3" opacity="0.6"/>
+        <line x1="758" y1="884" x2="842" y2="884" stroke="#C6B189" stroke-width="3" opacity="0.6"/>
+        <line x1="742" y1="980" x2="858" y2="980" stroke="#C6B189" stroke-width="3" opacity="0.6"/>
+
+        <!-- 矮栅栏 -->
+        <g fill="#B49468">
+          <rect x="372" y="686" width="188" height="12" rx="4"/>
+          <rect x="378" y="668" width="12" height="58" rx="3"/><rect x="420" y="668" width="12" height="58" rx="3"/>
+          <rect x="462" y="668" width="12" height="58" rx="3"/><rect x="504" y="668" width="12" height="58" rx="3"/>
+          <rect x="1040" y="686" width="188" height="12" rx="4"/>
+          <rect x="1084" y="668" width="12" height="58" rx="3"/><rect x="1126" y="668" width="12" height="58" rx="3"/>
+          <rect x="1168" y="668" width="12" height="58" rx="3"/><rect x="1210" y="668" width="12" height="58" rx="3"/>
+        </g>
+
+        <!-- 红邮箱 -->
+        <rect x="426" y="628" width="12" height="104" rx="4" fill="#9C7A50"/>
+        <rect x="404" y="600" width="58" height="38" rx="8" fill="#A9503B"/>
+        <rect x="404" y="600" width="58" height="14" rx="7" fill="#BC5D45"/>
+        <rect x="462" y="606" width="14" height="10" fill="#EBC985"/>
+
+        <!-- 花丛 -->
+        <g class="flower-sway">
+          <circle cx="1120" cy="732" r="9" fill="#E7A79A"/><circle cx="1146" cy="726" r="9" fill="#EBC985"/>
+          <circle cx="1172" cy="734" r="9" fill="#FBF4E6"/><circle cx="1198" cy="728" r="9" fill="#7C97AD"/>
+          <circle cx="1160" cy="748" r="8" fill="#E7A79A"/>
+        </g>
+        <g class="flower-sway">
+          <circle cx="404" cy="744" r="9" fill="#EBC985"/><circle cx="430" cy="738" r="9" fill="#E7A79A"/>
+          <circle cx="456" cy="746" r="9" fill="#FBF4E6"/><circle cx="482" cy="740" r="9" fill="#EBC985"/>
+        </g>
+
+        <!-- 小猪 -->
+        <g transform="translate(650,636)">
+          <ellipse cx="46" cy="150" rx="52" ry="12" fill="#4B3B2E" opacity="0.12"/>
+          <rect x="24" y="120" width="18" height="26" rx="7" fill="#EDA99F"/>
+          <rect x="52" y="120" width="18" height="26" rx="7" fill="#EDA99F"/>
+          <rect x="8"  y="66" width="20" height="46" rx="10" fill="#EDA99F"/>
+          <rect x="66" y="66" width="20" height="46" rx="10" fill="#EDA99F"/>
+          <rect x="14" y="60" width="66" height="72" rx="20" fill="#6E86A0"/>
+          <rect x="30" y="86" width="34" height="26" rx="6" fill="#7F97AF"/>
+          <rect x="22" y="46" width="9" height="26" rx="4" fill="#6E86A0"/>
+          <rect x="63" y="46" width="9" height="26" rx="4" fill="#6E86A0"/>
+          <circle cx="47" cy="34" r="38" fill="#EDA99F"/>
+          <polygon points="20,6 30,-16 42,4" fill="#E39A90"/>
+          <polygon points="74,6 64,-16 52,4" fill="#E39A90"/>
+          <ellipse cx="47" cy="46" rx="20" ry="15" fill="#F2B8AF"/>
+          <circle cx="41" cy="46" r="3.4" fill="#7A4A42"/><circle cx="53" cy="46" r="3.4" fill="#7A4A42"/>
+          <circle cx="34" cy="30" r="4" fill="#2E241C"/><circle cx="60" cy="30" r="4" fill="#2E241C"/>
+          <circle cx="27" cy="40" r="5" fill="#E7A79A" opacity="0.6"/><circle cx="67" cy="40" r="5" fill="#E7A79A" opacity="0.6"/>
+          <path d="M40,58 Q47,64 54,58" fill="none" stroke="#7A4A42" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+
+        <!-- 小兔 -->
+        <g transform="translate(902,648)">
+          <ellipse cx="40" cy="140" rx="48" ry="11" fill="#4B3B2E" opacity="0.12"/>
+          <path d="M8,138 Q40,120 72,138 L64,86 Q40,74 16,86 Z" fill="#F1E7CD"/>
+          <path d="M16,86 Q40,74 64,86 L60,96 Q40,86 20,96 Z" fill="#E7DBBE"/>
+          <circle cx="40" cy="60" r="34" fill="#FBF7EF"/>
+          <g transform="rotate(-12 26 26)"><rect x="16" y="-24" width="18" height="60" rx="9" fill="#FBF7EF"/><rect x="21" y="-16" width="8" height="40" rx="4" fill="#E7A79A"/></g>
+          <g transform="rotate(20 54 26)"><rect x="48" y="-20" width="18" height="58" rx="9" fill="#FBF7EF"/><rect x="53" y="-12" width="8" height="38" rx="4" fill="#E7A79A"/></g>
+          <path d="M28,30 L36,38 L20,38 Z" fill="#E7A79A"/><path d="M52,30 L60,38 L44,38 Z" fill="#E7A79A"/>
+          <circle cx="40" cy="34" r="6" fill="#E7A79A"/>
+          <circle cx="31" cy="60" r="3.6" fill="#5A4636"/><circle cx="49" cy="60" r="3.6" fill="#5A4636"/>
+          <circle cx="26" cy="66" r="4" fill="#E7A79A" opacity="0.55"/><circle cx="54" cy="66" r="4" fill="#E7A79A" opacity="0.55"/>
+          <path d="M38,66 L42,66 L40,69 Z" fill="#D98C82"/>
+          <path d="M34,72 Q40,77 46,72" fill="none" stroke="#8A6E5A" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+
+        <!-- 前景草丛 -->
+        <g fill="#7E9159">
+          <path d="M40,1040 Q56,980 72,1040 Z"/><path d="M70,1040 Q90,970 110,1040 Z"/><path d="M100,1040 Q116,988 132,1040 Z"/>
+          <path d="M1470,1040 Q1486,978 1502,1040 Z"/><path d="M1500,1040 Q1520,968 1540,1040 Z"/><path d="M1530,1040 Q1546,986 1562,1040 Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 文字与按钮 -->
+    <div class="home__content">
+      <p class="home__eyebrow">Pig &amp; Bunny</p>
+      <h1 class="home__title">小猪<span class="x">×</span>小兔</h1>
+      <p class="home__subtitle">一本一直写不完的日记。</p>
+      <button class="enter-btn" id="enterBtn" type="button">
+        进入我们的家<span class="enter-btn__heart">♥</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- 第二幕：客厅（第三步先把空间搭出来，第四步再让物件发光、可点） -->
+  <section class="room" id="room" aria-hidden="true">
+    <div class="room__scene">
+      <svg viewBox="0 0 1600 1360" xmlns="http://www.w3.org/2000/svg"
+           preserveAspectRatio="xMidYMid slice" role="img" aria-label="小猪和小兔的客厅">
+
+        <!-- 墙 · 天花 · 地板 -->
+        <rect x="0" y="0" width="1600" height="1360" fill="#F1E8D4"/>
+        <rect x="0" y="0" width="1600" height="150" fill="#E4D6B9"/>
+        <g fill="#8A6A44"><rect x="180" y="0" width="44" height="150"/><rect x="560" y="0" width="44" height="150"/><rect x="996" y="0" width="44" height="150"/><rect x="1376" y="0" width="44" height="150"/></g>
+        <rect x="0" y="1014" width="1600" height="16" fill="#D7C6A4" opacity="0.6"/>
+        <rect x="0" y="1030" width="1600" height="330" fill="#C7A574"/>
+        <g stroke="#B9975F" stroke-width="3" opacity="0.5"><line x1="0" y1="1108" x2="1600" y2="1108"/><line x1="0" y1="1200" x2="1600" y2="1200"/><line x1="360" y1="1030" x2="360" y2="1360"/><line x1="1180" y1="1030" x2="1180" y2="1360"/></g>
+
+        <!-- 左窗 + 阳光（装饰，窄屏会裁掉，但光柱进画面） -->
+        <g>
+          <rect x="40" y="250" width="330" height="420" rx="8" fill="#EFE6D2"/>
+          <rect x="52" y="262" width="306" height="396" fill="#C7DACB"/>
+          <circle cx="140" cy="540" r="70" fill="#9FB988" opacity="0.8"/><circle cx="290" cy="560" r="86" fill="#8FAE7A" opacity="0.8"/>
+          <rect x="52" y="262" width="306" height="150" fill="#D9E4D2" opacity="0.7"/>
+          <line x1="205" y1="262" x2="205" y2="658" stroke="#FBF6E9" stroke-width="12"/><line x1="52" y1="460" x2="358" y2="460" stroke="#FBF6E9" stroke-width="12"/>
+          <rect x="30" y="654" width="352" height="22" rx="6" fill="#9C7A50"/>
+          <path d="M52,262 Q80,460 52,656 L104,656 Q86,460 104,262 Z" fill="#FBF6E9" opacity="0.4"/>
+          <path d="M358,262 Q330,460 358,656 L306,656 Q324,460 306,262 Z" fill="#FBF6E9" opacity="0.4"/>
+        </g>
+        <polygon points="80,420 360,420 780,1360 300,1360" fill="#EBC985" opacity="0.15"/>
+
+        <!-- 地毯 + 睡着的猫（在家具之后，垫在下面） -->
+        <ellipse cx="820" cy="1150" rx="400" ry="72" fill="#E7D9BC"/>
+        <ellipse cx="820" cy="1150" rx="400" ry="72" fill="none" stroke="#D8C7A6" stroke-width="6"/>
+        <g stroke="#E7A79A" stroke-width="4" fill="none" opacity="0.6"><ellipse cx="820" cy="1150" rx="316" ry="54"/><ellipse cx="820" cy="1150" rx="220" ry="38"/></g>
+        <g transform="translate(566,1108)">
+          <ellipse cx="60" cy="30" rx="64" ry="28" fill="#D8C7A6"/><circle cx="14" cy="16" r="21" fill="#D8C7A6"/>
+          <path d="M2,2 L8,-10 L16,4 Z M20,2 L28,-10 L34,6 Z" fill="#C7B48C"/>
+          <path d="M108,22 Q138,8 118,38" fill="#D8C7A6"/><path d="M7,18 q4,3 10,0" stroke="#8A7358" stroke-width="2" fill="none"/>
+        </g>
+
+        <!-- 吊灯 -->
+        <line x1="800" y1="150" x2="800" y2="300" stroke="#5A4A34" stroke-width="5"/>
+        <path d="M750,354 L850,354 L830,300 L770,300 Z" fill="#6E5A3E"/>
+        <ellipse cx="800" cy="360" rx="40" ry="10" fill="#4B3B2E"/>
+        <circle cx="800" cy="374" r="58" fill="#F4D58C" opacity="0.35" class="win-glow"/>
+        <circle cx="800" cy="366" r="12" fill="#F6E1A6"/>
+
+        <!-- ===== 照片墙（入口①） ===== -->
+        <g class="hotspot" id="ph-photos" data-open="photos" role="button" tabindex="0" aria-label="打开照片墙">
+          <ellipse class="hotspot-glow" cx="800" cy="440" rx="250" ry="112" fill="#F4D58C"/>
+          <g>
+            <path d="M576,392 Q800,376 1024,404" fill="none" stroke="#B49468" stroke-width="3"/>
+            <g transform="rotate(-4 640 452)"><rect x="600" y="412" width="80" height="94" rx="4" fill="#FBF6E9"/><rect x="608" y="420" width="64" height="62" fill="#9FB0A2"/></g>
+            <g transform="rotate(3 760 452)"><rect x="720" y="420" width="80" height="94" rx="4" fill="#FBF6E9"/><rect x="728" y="428" width="64" height="62" fill="#E7A79A"/></g>
+            <g transform="rotate(-2 884 452)"><rect x="844" y="414" width="80" height="94" rx="4" fill="#FBF6E9"/><rect x="852" y="422" width="64" height="62" fill="#C7B48C"/></g>
+            <g transform="rotate(4 1004 456)"><rect x="964" y="424" width="80" height="94" rx="4" fill="#FBF6E9"/><rect x="972" y="432" width="64" height="62" fill="#8FAE7A"/></g>
+          </g>
+          <g class="hint"><rect x="726" y="326" width="148" height="46" rx="10" fill="#FBF6E9" stroke="#C9B48C" stroke-width="1.5"/><text x="800" y="356" text-anchor="middle" font-family="Kaiti SC, STKaiti, KaiTi, serif" font-size="26" fill="#4B3B2E">照片墙</text></g>
+        </g>
+
+        <!-- 沙发（搭毯在右扶手） -->
+        <g>
+          <rect x="556" y="700" width="500" height="150" rx="40" fill="#D8968C"/>
+          <rect x="536" y="744" width="86" height="200" rx="30" fill="#CB8379"/>
+          <rect x="990" y="744" width="86" height="200" rx="30" fill="#CB8379"/>
+          <rect x="576" y="788" width="460" height="150" rx="34" fill="#C97C72"/>
+          <rect x="600" y="794" width="196" height="120" rx="24" fill="#D28A80"/>
+          <rect x="816" y="794" width="196" height="120" rx="24" fill="#D28A80"/>
+          <g transform="rotate(-8 690 800)"><rect x="642" y="742" width="92" height="92" rx="20" fill="#EFC0B7"/><circle cx="688" cy="788" r="19" fill="#EDA99F"/><ellipse cx="688" cy="792" rx="9" ry="6" fill="#F2B8AF"/><circle cx="682" cy="780" r="2.4" fill="#5A3A34"/><circle cx="694" cy="780" r="2.4" fill="#5A3A34"/></g>
+          <g transform="rotate(7 930 800)"><rect x="884" y="742" width="92" height="92" rx="20" fill="#DCE3EA"/><circle cx="930" cy="792" r="19" fill="#FBF7EF"/><rect x="920" y="754" width="8" height="26" rx="4" fill="#FBF7EF"/><rect x="932" y="754" width="8" height="26" rx="4" fill="#FBF7EF"/><circle cx="924" cy="792" r="2.4" fill="#5A4636"/><circle cx="936" cy="792" r="2.4" fill="#5A4636"/></g>
+          <path d="M990,744 Q1014,788 1058,798 L1076,940 L980,940 Z" fill="#EFE6D2" opacity="0.85"/>
+        </g>
+
+        <!-- ===== 放映室 · 复古电视（入口②，在沙发左前方） ===== -->
+        <g class="hotspot" id="ph-movies" data-open="movies" role="button" tabindex="0" aria-label="打开放映室">
+          <ellipse class="hotspot-glow" cx="660" cy="980" rx="150" ry="122" fill="#F4D58C"/>
+          <g>
+            <rect x="544" y="980" width="232" height="150" rx="10" fill="#A9885C"/>
+            <rect x="544" y="980" width="232" height="150" rx="10" fill="none" stroke="#8A6A44" stroke-width="4"/>
+            <rect x="580" y="852" width="164" height="120" rx="16" fill="#9C7A50"/>
+            <rect x="580" y="852" width="164" height="120" rx="16" fill="none" stroke="#7E603D" stroke-width="5"/>
+            <rect x="596" y="868" width="114" height="88" rx="8" fill="#EEC98A" class="win-glow"/>
+            <circle cx="632" cy="912" r="14" fill="#EDA99F"/><circle cx="664" cy="912" r="13" fill="#FBF7EF"/>
+            <rect x="718" y="870" width="16" height="84" rx="4" fill="#5A4A3C"/>
+            <line x1="652" y1="852" x2="628" y2="812" stroke="#5A4A3C" stroke-width="4"/><line x1="672" y1="852" x2="700" y2="808" stroke="#5A4A3C" stroke-width="4"/>
+          </g>
+          <g class="hint"><rect x="588" y="792" width="148" height="46" rx="10" fill="#FBF6E9" stroke="#C9B48C" stroke-width="1.5"/><text x="662" y="822" text-anchor="middle" font-family="Kaiti SC, STKaiti, KaiTi, serif" font-size="26" fill="#4B3B2E">放映室</text></g>
+        </g>
+
+        <!-- ===================================================================
+             回忆角 · Memory Corner
+             一张放了很多年的矮橡木柜，靠在客厅右边的角落。
+             上面的东西都不解释，谁住在这儿，看一眼就知道了。
+             =================================================================== -->
+        <g id="memory-corner">
+
+          <defs>
+            <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#F4D58C" stop-opacity="0.55"/>
+              <stop offset="55%"  stop-color="#EBC985" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#EBC985" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- 墙角：右边墙面轻轻暗下去，才有“角落”的感觉 -->
+          <rect x="1516" y="150" width="84" height="864" fill="#4B3B2E" opacity="0.05"/>
+          <rect x="1576" y="150" width="24" height="864" fill="#4B3B2E" opacity="0.05"/>
+
+          <!-- 台灯的暖光，先铺在墙上 -->
+          <ellipse cx="1480" cy="810" rx="170" ry="175" fill="url(#lampGlow)"/>
+
+          <!-- —— 墙上：随手贴的几张 —— -->
+          <!-- 拍立得 1 -->
+          <g transform="rotate(-5 1232 604)">
+            <rect x="1190" y="554" width="84" height="100" rx="3" fill="#FBF6E9"/>
+            <rect x="1197" y="561" width="70" height="66" fill="#9FB0A2"/>
+            <rect x="1214" y="546" width="36" height="14" rx="2" fill="#C9B48C" opacity="0.55"/>
+          </g>
+          <!-- 拍立得 2 -->
+          <g transform="rotate(4 1352 640)">
+            <rect x="1310" y="590" width="84" height="100" rx="3" fill="#FBF6E9"/>
+            <rect x="1317" y="597" width="70" height="66" fill="#E7A79A"/>
+            <rect x="1334" y="582" width="36" height="14" rx="2" fill="#C9B48C" opacity="0.55"/>
+          </g>
+          <!-- 电影票 -->
+          <g transform="rotate(-9 1476 586)">
+            <rect x="1430" y="564" width="92" height="44" rx="4" fill="#E9D6B6"/>
+            <line x1="1492" y1="566" x2="1492" y2="606" stroke="#C9B48C" stroke-width="2" stroke-dasharray="4 4"/>
+            <line x1="1440" y1="578" x2="1482" y2="578" stroke="#C0A87E" stroke-width="3"/>
+            <line x1="1440" y1="590" x2="1470" y2="590" stroke="#C0A87E" stroke-width="3"/>
+            <circle cx="1430" cy="586" r="4" fill="#F1E8D4"/><circle cx="1522" cy="586" r="4" fill="#F1E8D4"/>
+          </g>
+          <!-- 便利贴 -->
+          <g transform="rotate(3 1244 736)">
+            <rect x="1208" y="700" width="72" height="70" rx="2" fill="#EBC985"/>
+            <path d="M1208,700 l72,0 l0,8 l-72,0 Z" fill="#E0B96F" opacity="0.6"/>
+            <line x1="1218" y1="722" x2="1268" y2="722" stroke="#C29A4E" stroke-width="3"/>
+            <line x1="1218" y1="736" x2="1258" y2="736" stroke="#C29A4E" stroke-width="3"/>
+            <line x1="1218" y1="750" x2="1264" y2="750" stroke="#C29A4E" stroke-width="3"/>
+          </g>
+          <!-- 明信片 -->
+          <g transform="rotate(-4 1404 748)">
+            <rect x="1348" y="710" width="114" height="76" rx="3" fill="#FBF6E9"/>
+            <rect x="1348" y="710" width="114" height="76" rx="3" fill="none" stroke="#DCCBA8" stroke-width="2"/>
+            <rect x="1426" y="718" width="26" height="20" rx="2" fill="#C77B54" opacity="0.75"/>
+            <line x1="1358" y1="750" x2="1414" y2="750" stroke="#D8C7A6" stroke-width="3"/>
+            <line x1="1358" y1="762" x2="1400" y2="762" stroke="#D8C7A6" stroke-width="3"/>
+            <line x1="1358" y1="774" x2="1408" y2="774" stroke="#D8C7A6" stroke-width="3"/>
+            <rect x="1382" y="702" width="34" height="13" rx="2" fill="#C9B48C" opacity="0.5"/>
+          </g>
+
+          <!-- —— 矮橡木柜 —— -->
+          <g>
+            <ellipse cx="1364" cy="1124" rx="230" ry="20" fill="#4B3B2E" opacity="0.10"/>
+            <!-- 柜面 -->
+            <rect x="1146" y="874" width="438" height="18" rx="4" fill="#BC966A"/>
+            <rect x="1146" y="888" width="438" height="10" rx="3" fill="#8A6A44"/>
+            <!-- 柜体 -->
+            <rect x="1162" y="898" width="404" height="192" fill="#A9885C"/>
+            <rect x="1162" y="898" width="404" height="192" fill="none" stroke="#8A6A44" stroke-width="4"/>
+            <g stroke="#9C7A50" stroke-width="2" opacity="0.45">
+              <line x1="1200" y1="906" x2="1200" y2="1082"/><line x1="1268" y1="906" x2="1268" y2="1082"/>
+              <line x1="1452" y1="906" x2="1452" y2="1082"/><line x1="1520" y1="906" x2="1520" y2="1082"/>
+            </g>
+            <!-- 敞开的格子：篮球和攀岩鞋就塞在这儿 -->
+            <rect x="1186" y="924" width="192" height="142" rx="4" fill="#7A5C3A"/>
+            <rect x="1186" y="924" width="192" height="16" fill="#6B4F31" opacity="0.7"/>
+            <!-- 抽屉 -->
+            <rect x="1400" y="924" width="146" height="66" rx="4" fill="#B08A5A"/>
+            <rect x="1400" y="924" width="146" height="66" rx="4" fill="none" stroke="#8A6A44" stroke-width="3"/>
+            <circle cx="1473" cy="957" r="7" fill="#8A6A44"/>
+            <rect x="1400" y="1000" width="146" height="66" rx="4" fill="#B08A5A"/>
+            <rect x="1400" y="1000" width="146" height="66" rx="4" fill="none" stroke="#8A6A44" stroke-width="3"/>
+            <circle cx="1473" cy="1033" r="7" fill="#8A6A44"/>
+            <!-- 柜脚 -->
+            <rect x="1178" y="1090" width="26" height="30" rx="3" fill="#7A5C3A"/>
+            <rect x="1524" y="1090" width="26" height="30" rx="3" fill="#7A5C3A"/>
+          </g>
+
+          <!-- 格子里：磨旧的篮球 -->
+          <g>
+            <circle cx="1252" cy="1002" r="41" fill="#C0713F"/>
+            <circle cx="1252" cy="1002" r="41" fill="none" stroke="#A35A2E" stroke-width="3"/>
+            <path d="M1211,1002 h82 M1252,961 v82" stroke="#8A4B28" stroke-width="3" fill="none"/>
+            <path d="M1222,972 Q1252,1002 1222,1032 M1282,972 Q1252,1002 1282,1032" stroke="#8A4B28" stroke-width="3" fill="none"/>
+            <ellipse cx="1236" cy="984" rx="11" ry="7" fill="#CE8354" opacity="0.85"/>
+            <ellipse cx="1268" cy="1020" rx="8" ry="5" fill="#CE8354" opacity="0.7"/>
+          </g>
+
+          <!-- 格子里：攀岩鞋（一双，随手一放） -->
+          <g transform="translate(1296,1010)">
+            <g transform="rotate(-6 34 30)">
+              <path d="M2,42 Q0,18 16,12 Q34,4 52,14 Q68,24 66,42 Q38,50 2,42 Z" fill="#6E7FA0"/>
+              <path d="M2,42 Q38,50 66,42 L64,51 Q36,59 2,51 Z" fill="#3A3F4A"/>
+              <path d="M14,16 Q32,10 48,16" stroke="#EFE0C4" stroke-width="3" fill="none"/>
+            </g>
+            <g transform="rotate(9 44 44)">
+              <path d="M16,52 Q14,30 30,25 Q46,18 62,27 Q76,36 74,52 Q46,60 16,52 Z" fill="#5F718F"/>
+              <path d="M16,52 Q46,60 74,52 L72,60 Q44,68 16,60 Z" fill="#33383F"/>
+            </g>
+          </g>
+
+          <!-- 柜面上：小猪布偶 -->
+          <g transform="translate(1176,796)">
+            <ellipse cx="34" cy="78" rx="30" ry="7" fill="#4B3B2E" opacity="0.12"/>
+            <ellipse cx="8"  cy="58" rx="8" ry="12" fill="#E39A90"/>
+            <ellipse cx="60" cy="58" rx="8" ry="12" fill="#E39A90"/>
+            <ellipse cx="34" cy="56" rx="30" ry="24" fill="#EDA99F"/>
+            <circle cx="34" cy="26" r="23" fill="#EDA99F"/>
+            <polygon points="15,9 20,-5 30,7" fill="#E39A90"/>
+            <polygon points="53,9 48,-5 38,7" fill="#E39A90"/>
+            <ellipse cx="34" cy="34" rx="11" ry="8" fill="#F2B8AF"/>
+            <circle cx="30" cy="34" r="1.9" fill="#7A4A42"/><circle cx="38" cy="34" r="1.9" fill="#7A4A42"/>
+            <circle cx="26" cy="21" r="2.5" fill="#2E241C"/><circle cx="42" cy="21" r="2.5" fill="#2E241C"/>
+          </g>
+
+          <!-- 柜面上：小兔布偶（挨着小猪） -->
+          <g transform="translate(1248,790)">
+            <ellipse cx="32" cy="84" rx="28" ry="7" fill="#4B3B2E" opacity="0.12"/>
+            <ellipse cx="6"  cy="64" rx="7" ry="11" fill="#F1E7CD"/>
+            <ellipse cx="58" cy="64" rx="7" ry="11" fill="#F1E7CD"/>
+            <ellipse cx="32" cy="62" rx="28" ry="23" fill="#FBF7EF"/>
+            <circle cx="32" cy="34" r="21" fill="#FBF7EF"/>
+            <rect x="19" y="1"  width="10" height="28" rx="5" fill="#FBF7EF"/>
+            <rect x="35" y="1"  width="10" height="28" rx="5" fill="#FBF7EF"/>
+            <rect x="22" y="7"  width="4"  height="18" rx="2" fill="#E7A79A"/>
+            <rect x="38" y="7"  width="4"  height="18" rx="2" fill="#E7A79A"/>
+            <circle cx="26" cy="34" r="2.3" fill="#5A4636"/><circle cx="38" cy="34" r="2.3" fill="#5A4636"/>
+            <path d="M30,40 L34,40 L32,43 Z" fill="#E7A79A"/>
+          </g>
+
+          <!-- 柜面上：胶卷相机 -->
+          <g transform="translate(1322,826)">
+            <rect x="0"  y="16" width="78" height="34" rx="6" fill="#5A4A3C"/>
+            <rect x="0"  y="16" width="78" height="10" rx="5" fill="#8FA0AB"/>
+            <rect x="22" y="8"  width="24" height="10" rx="3" fill="#5A4A3C"/>
+            <circle cx="40" cy="36" r="13" fill="#3A2F26"/>
+            <circle cx="40" cy="36" r="6.5" fill="#8FA0AB"/>
+            <rect x="60" y="22" width="10" height="6" rx="2" fill="#C0714A"/>
+          </g>
+
+          <!-- 柜面上：复古头戴耳机 -->
+          <g transform="translate(1400,812)">
+            <path d="M8,44 Q34,2 60,44" fill="none" stroke="#5A4A3C" stroke-width="8" stroke-linecap="round"/>
+            <rect x="0"  y="38" width="20" height="26" rx="8" fill="#5A4A3C"/>
+            <rect x="48" y="38" width="20" height="26" rx="8" fill="#5A4A3C"/>
+            <ellipse cx="10" cy="51" rx="7.5" ry="10.5" fill="#EFE0C4"/>
+            <ellipse cx="58" cy="51" rx="7.5" ry="10.5" fill="#EFE0C4"/>
+          </g>
+
+          <!-- 柜面上：地铁票和机票，随手压在灯下 -->
+          <g transform="rotate(-7 1502 862)">
+            <rect x="1472" y="850" width="60" height="24" rx="2" fill="#F3E7CE"/>
+            <rect x="1472" y="850" width="60" height="7"  rx="2" fill="#7C97AD" opacity="0.8"/>
+            <line x1="1478" y1="864" x2="1512" y2="864" stroke="#C9B48C" stroke-width="2"/>
+          </g>
+          <g transform="rotate(5 1512 872)">
+            <rect x="1478" y="862" width="70" height="22" rx="2" fill="#FBF6E9"/>
+            <line x1="1524" y1="862" x2="1524" y2="884" stroke="#DCCBA8" stroke-width="2" stroke-dasharray="3 3"/>
+            <path d="M1486,872 l14,-5 l-2,5 l8,0 l-8,5 l2,5 Z" fill="#7C97AD" opacity="0.75"/>
+          </g>
+
+          <!-- 柜面上：暖黄台灯 -->
+          <g>
+            <ellipse cx="1548" cy="872" rx="32" ry="7" fill="#8A6A44"/>
+            <rect x="1542" y="800" width="12" height="72" fill="#B08A5A"/>
+            <path d="M1510,800 L1586,800 L1572,748 L1524,748 Z" fill="#EBC985"/>
+            <path d="M1510,800 L1586,800 L1572,748 L1524,748 Z" fill="none" stroke="#D9AE6A" stroke-width="3"/>
+            <ellipse cx="1548" cy="806" rx="44" ry="14" fill="#F6E1A6" opacity="0.55" class="win-glow"/>
+          </g>
+
+          <!-- 柜边地上：几本书 -->
+          <g transform="translate(1152,1092)">
+            <rect x="0"  y="56" width="94" height="16" rx="3" fill="#7C97AD"/>
+            <rect x="5"  y="40" width="84" height="16" rx="3" fill="#C77B54"/>
+            <rect x="12" y="24" width="74" height="16" rx="3" fill="#86976B"/>
+            <line x1="8"  y1="64" x2="86" y2="64" stroke="#6B849A" stroke-width="2" opacity="0.7"/>
+            <line x1="13" y1="48" x2="81" y2="48" stroke="#AF6A46" stroke-width="2" opacity="0.7"/>
+          </g>
+
+          <!-- 柜边地上：睡在藤篮里的小猫 -->
+          <g transform="translate(1264,1104)">
+            <path d="M0,42 Q60,60 120,42 L112,92 Q60,108 8,92 Z" fill="#C9A87A"/>
+            <path d="M0,42 Q60,60 120,42" fill="none" stroke="#B08A5A" stroke-width="6"/>
+            <g stroke="#B08A5A" stroke-width="3" opacity="0.6">
+              <line x1="26" y1="54" x2="22" y2="96"/><line x1="60" y1="60" x2="60" y2="102"/><line x1="94" y1="54" x2="98" y2="96"/>
+            </g>
+            <ellipse cx="62" cy="36" rx="44" ry="21" fill="#BFB4A4"/>
+            <circle cx="28" cy="30" r="15" fill="#BFB4A4"/>
+            <path d="M16,21 L20,9 L28,21 Z M34,19 L42,9 L46,21 Z" fill="#ABA090"/>
+            <path d="M96,34 Q120,22 104,46" fill="#BFB4A4"/>
+            <path d="M21,32 q4,3 9,0" stroke="#7A6E5E" stroke-width="2" fill="none"/>
+            <path d="M33,30 q3,2 7,0" stroke="#7A6E5E" stroke-width="2" fill="none"/>
+          </g>
+
+          <!-- 柜边地上：拳击手套（一只立着，一只歪靠着） -->
+          <g transform="translate(1424,1106)">
+            <path d="M6,86 Q0,46 18,33 Q34,23 50,33 Q66,46 60,86 Z" fill="#B04A3E"/>
+            <path d="M6,66 Q33,74 60,66" fill="none" stroke="#8F392F" stroke-width="3"/>
+            <rect x="13" y="84" width="41" height="14" rx="6" fill="#EFE0C4"/>
+            <g transform="rotate(16 104 72)">
+              <path d="M78,88 Q72,50 90,38 Q106,28 122,38 Q138,50 132,88 Z" fill="#9E4136"/>
+              <path d="M78,70 Q105,78 132,70" fill="none" stroke="#82342B" stroke-width="3"/>
+              <rect x="85" y="86" width="41" height="14" rx="6" fill="#EFE0C4"/>
+            </g>
+          </g>
+
+        </g>
+
+        <!-- 盆栽（沙发右侧，装饰） -->
+        <g>
+          <path d="M1096,1020 L1140,1020 L1130,928 L1106,928 Z" fill="#B4643F"/>
+          <g fill="#7E9159"><path d="M1118,928 Q1064,852 1096,808 Q1112,864 1120,928"/><path d="M1118,928 Q1172,848 1142,806 Q1128,866 1120,928"/><path d="M1118,928 Q1118,832 1118,806 Q1128,862 1120,928"/></g>
+        </g>
+
+        <!-- ===================================================================
+             留声机 · 1930s 木质留声机
+             默认安静：唱针抬着，唱片不转。
+             点一下，屋子的主人就把今天的生活打开了。
+             =================================================================== -->
+
+        <!-- 播放时才浮现的小纸条（贴在墙上，不遮挡画面） -->
+        <g class="gramo-note" id="gramoNote">
+          <g transform="rotate(-3 978 630)">
+            <rect x="850" y="588" width="256" height="86" rx="3" fill="#FBF6E9"/>
+            <rect x="850" y="588" width="256" height="86" rx="3" fill="none" stroke="#E4D6B9" stroke-width="2"/>
+            <rect x="946" y="580" width="66" height="15" rx="2" fill="#C9B48C" opacity="0.5"/>
+            <text id="gramoNoteText" x="978" y="640" text-anchor="middle"
+                  font-family="Kaiti SC, STKaiti, KaiTi, serif" font-size="27" fill="#4B3B2E">今天也一起生活吧。</text>
+          </g>
+        </g>
+
+        <g class="gramo" id="gramophone" role="button" tabindex="0" aria-label="留声机：播放今天的音乐">
+
+          <!-- 靠近时才亮起的暖光 -->
+          <ellipse class="gramo-glow" cx="1030" cy="912" rx="138" ry="128" fill="#F4D58C"/>
+
+          <!-- 小木凳 -->
+          <ellipse cx="1030" cy="1024" rx="72" ry="11" fill="#4B3B2E" opacity="0.10"/>
+          <rect x="986" y="1002" width="11" height="20" rx="3" fill="#9C7A50"/>
+          <rect x="1063" y="1002" width="11" height="20" rx="3" fill="#9C7A50"/>
+          <ellipse cx="1030" cy="1006" rx="74" ry="16" fill="#B98C57"/>
+          <ellipse cx="1030" cy="1000" rx="74" ry="16" fill="#C69A63"/>
+
+          <!-- 喇叭：黄铜色，绘本式的两层椭圆 -->
+          <path d="M1046,880 Q1058,910 1052,936 L1024,936 Q1020,908 1012,882 Z" fill="#B08A5A"/>
+          <path d="M1046,880 Q1058,910 1052,936" fill="none" stroke="#9C7A50" stroke-width="2.5"/>
+          <g transform="rotate(-22 1030 856)">
+            <ellipse cx="1030" cy="856" rx="52" ry="30" fill="#C9A46A"/>
+            <ellipse cx="1030" cy="856" rx="52" ry="30" fill="none" stroke="#A98A56" stroke-width="3"/>
+            <ellipse cx="1030" cy="857" rx="39" ry="21" fill="#A98A56"/>
+            <ellipse cx="1030" cy="857" rx="39" ry="21" fill="none" stroke="#8F7346" stroke-width="2"/>
+            <path d="M998,846 Q1012,834 1032,832" fill="none" stroke="#DEBE86" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+          </g>
+
+          <!-- 木箱 -->
+          <rect x="972" y="940" width="116" height="52" rx="6" fill="#A9885C"/>
+          <rect x="972" y="940" width="116" height="52" rx="6" fill="none" stroke="#8A6A44" stroke-width="3"/>
+          <g stroke="#9C7A50" stroke-width="2" opacity="0.5">
+            <line x1="994"  y1="948" x2="994"  y2="984"/>
+            <line x1="1030" y1="948" x2="1030" y2="984"/>
+            <line x1="1066" y1="948" x2="1066" y2="984"/>
+          </g>
+          <rect x="966" y="930" width="128" height="13" rx="4" fill="#BC966A"/>
+          <rect x="966" y="930" width="128" height="13" rx="4" fill="none" stroke="#8A6A44" stroke-width="2"/>
+          <!-- 手摇柄 -->
+          <rect x="1088" y="957" width="16" height="5" rx="2.5" fill="#B08A5A"/>
+          <circle cx="1107" cy="959" r="5" fill="#C9A46A"/>
+
+          <!-- 唱片（外层压扁成透视，内层负责旋转） -->
+          <g transform="translate(1030,926) scale(1,0.34)">
+            <g id="gramoSpin">
+              <circle r="45" fill="#2F2721"/>
+              <g fill="none" stroke="#463A30" stroke-width="1.6">
+                <circle r="37"/><circle r="30"/><circle r="23"/>
+              </g>
+              <path d="M0,-45 A45,45 0 0 1 31,-33" fill="none" stroke="#6B5B4B" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+              <circle r="14" fill="#E9D6B6"/>
+              <circle r="14" fill="none" stroke="#C9B48C" stroke-width="1.5"/>
+              <circle r="2.4" fill="#2F2721"/>
+            </g>
+          </g>
+
+          <!-- 唱针（外层定位，内层负责抬起 / 落下） -->
+          <g transform="translate(1086,920)">
+            <g id="gramoArm">
+              <path d="M-3,-2 L-56,11" fill="none" stroke="#B08A5A" stroke-width="5" stroke-linecap="round"/>
+              <path d="M-52,5 l-12,3 l3,11 l13,-5 z" fill="#9C7A50"/>
+              <circle r="8" fill="#C9A46A"/>
+              <circle r="8" fill="none" stroke="#9C7A50" stroke-width="2"/>
+              <circle r="3" fill="#8A6A44"/>
+            </g>
+          </g>
+
+          <!-- 靠近时的一句话 -->
+          <g class="hint">
+            <rect x="924" y="742" width="212" height="46" rx="10" fill="#FBF6E9" stroke="#C9B48C" stroke-width="1.5"/>
+            <text id="gramoHintText" x="1030" y="772" text-anchor="middle"
+                  font-family="Kaiti SC, STKaiti, KaiTi, serif" font-size="24" fill="#4B3B2E">点击播放今天的音乐</text>
+          </g>
+        </g>
+
+        <!-- 茶几 + 桌上物（含入口③日记） -->
+        <g>
+          <ellipse cx="880" cy="1052" rx="200" ry="44" fill="#B98C57"/>
+          <ellipse cx="880" cy="1046" rx="200" ry="44" fill="#C69A63"/>
+          <rect x="770" y="1058" width="16" height="86" rx="6" fill="#9C7A50"/><rect x="974" y="1058" width="16" height="86" rx="6" fill="#9C7A50"/>
+          <path d="M700,1044 Q696,998 720,996 Q744,998 740,1044 Z" fill="#DCE3EA"/>
+          <g stroke="#7E9159" stroke-width="4" fill="none"><path d="M720,998 Q708,962 692,952"/><path d="M720,998 Q732,958 750,952"/><path d="M720,998 L720,950"/></g>
+          <circle cx="692" cy="950" r="8" fill="#E7A79A"/><circle cx="750" cy="950" r="8" fill="#EBC985"/><circle cx="720" cy="948" r="8" fill="#FBF6E9"/>
+          <rect x="792" y="1022" width="120" height="16" rx="3" fill="#7C97AD"/><rect x="800" y="1008" width="112" height="16" rx="3" fill="#C77B54"/>
+          <g><rect x="612" y="1030" width="34" height="30" rx="6" fill="#EFC0B7"/><path d="M646,1036 q14,0 14,10 q0,10 -14,10" fill="none" stroke="#EFC0B7" stroke-width="5"/></g>
+          <rect x="1000" y="1020" width="86" height="52" rx="8" fill="#5A4A3C"/><rect x="1020" y="1012" width="30" height="12" rx="3" fill="#5A4A3C"/><circle cx="1043" cy="1046" r="18" fill="#3A2F26"/><circle cx="1043" cy="1046" r="9" fill="#8FA0AB"/>
+          <!-- 日记本 -->
+          <g class="hotspot" id="ph-diary" data-open="diary" role="button" tabindex="0" aria-label="打开日记">
+            <ellipse class="hotspot-glow" cx="878" cy="1024" rx="122" ry="72" fill="#F4D58C"/>
+            <g transform="rotate(-6 878 1020)">
+              <rect x="826" y="994" width="108" height="72" rx="8" fill="#C77B54"/>
+              <rect x="826" y="994" width="16" height="72" rx="6" fill="#A9503B"/>
+              <line x1="856" y1="1010" x2="918" y2="1010" stroke="#EFDCC0" stroke-width="3" opacity="0.7"/>
+              <line x1="856" y1="1028" x2="918" y2="1028" stroke="#EFDCC0" stroke-width="3" opacity="0.7"/>
+              <line x1="856" y1="1046" x2="918" y2="1046" stroke="#EFDCC0" stroke-width="3" opacity="0.7"/>
+              <path d="M934,994 l14,4 l-14,60 l0,-64" fill="#E7A79A"/>
+            </g>
+            <g class="hint"><rect x="812" y="926" width="132" height="46" rx="10" fill="#FBF6E9" stroke="#C9B48C" stroke-width="1.5"/><text x="878" y="956" text-anchor="middle" font-family="Kaiti SC, STKaiti, KaiTi, serif" font-size="26" fill="#4B3B2E">日记</text></g>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 播放时，屋子里的光暖一点点 -->
+    <div class="room__warm" aria-hidden="true"></div>
+
+    <!-- 回到门口 -->
+    <button class="room__back" id="backBtn" type="button" aria-label="回到门口">
+      <span class="room__back-icon">⌂</span><span class="room__back-text">回门口</span>
+    </button>
+
+    <!-- 竖屏时的轻声提示 -->
+    <div class="room__hint" id="roomHint">← 左右滑一滑，看看这个家 →</div>
+  </section>
+
+  <!-- 翻开的卡片（照片墙 / 放映室 / 日记 共用一套） -->
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div class="viewer__backdrop" data-close></div>
+    <div class="viewer__card" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+      <button class="viewer__close" id="viewerClose" type="button" aria-label="合上">&times;</button>
+      <div class="viewer__inner" id="viewerInner"></div>
+    </div>
+  </div>
+
+  <!-- 推门暖光过场 -->
+  <div class="transition" id="transition"></div>
+
+  <!-- 环境层：纸纹 · 暗角 · 灰尘 -->
+  <div class="atmosphere__vignette"></div>
+  <div class="atmosphere__grain"></div>
+  <div class="atmosphere__dust" id="dust"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
